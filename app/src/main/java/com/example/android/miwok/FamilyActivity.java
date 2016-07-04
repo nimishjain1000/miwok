@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class FamilyActivity extends AppCompatActivity {
 private MediaPlayer mediaPlayer;
-    private AudioManager mAudioManager;
+
     private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
         @Override
         public void onCompletion(MediaPlayer mediaPlayer) {
@@ -21,7 +21,7 @@ private MediaPlayer mediaPlayer;
             releaseMediaPlayer();
         }
     };
-
+    private AudioManager mAudioManager;
     private AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
         @Override
         public void onAudioFocusChange(int focusChange) {
